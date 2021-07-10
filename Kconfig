@@ -1,0 +1,4 @@
+mainmenu "My Os Configuration"
+
+source "arch/Kconfig"
+source "init/Kconfig"

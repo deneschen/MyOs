@@ -1,0 +1,5 @@
+config INIT
+	bool "init module support"
+	default y
+	help
+	  init module support

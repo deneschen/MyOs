@@ -1,0 +1,3 @@
+CONFIG_ARM64=y
+# CONFIG_RISCV is not set
+CONFIG_INIT=y

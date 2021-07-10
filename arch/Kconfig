@@ -1,0 +1,9 @@
+config ARM64
+	bool "arm64 support"
+	help
+	  arm64 platform support
+
+config RISCV
+	bool "riscv support"
+	help
+	  riscv platform support
