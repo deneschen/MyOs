@@ -1,23 +1,21 @@
-# MyOs project start
+# 哪吒D1
 
-pushd cmake/scripts
-rm -rf kconfig && git clone https://github.com/ulfalizer/Kconfiglib.git kconfig
-popd
+单板配置文件
+configs/d1_defconfig
 
-# How to build?
-
-example: d1
-
-do menuconfig to enable some CONFIG_XXX
-
+修改配置文件
 ./build.sh target=menuconfig BOARD=d1
 
-do build binary
+编译镜像
+./build.sh BOARD=d1 target=d1
 
-./build.sh target=d1 BOARD=d1
+# 树莓派4B
 
-example: raspi4b
+单板配置文件
+configs/raspi4b_defconfig
 
-... ...
+修改配置文件
+./build.sh target=menuconfig BOARD=raspi4b
 
+编译镜像
 ./build.sh BOARD=raspi4b target=raspi4b
