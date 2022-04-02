@@ -15,16 +15,14 @@ do
 done
 # args parse end.
 
+test "X${target}" = "X" && export target=${BOARD}
+
 echo BOARD:$BOARD
 echo target:$target
 
 cmake -S . -B output \
 	-DBOARD=${BOARD} \
-	-DPROJECT_NAME=${target} \
+	-DPROJECT_NAME=${BOARD} \
 	-DCMAKE_TOOLCHAIN_FILE=${current_dir}/cmake/toolschain/${BOARD}_gcc.cmake
 
-if [[ "X${target}" != "X" ]];then
-	cmake --build output --target ${target}
-else
-	cmake --build output --target d1
-fi
+cmake --build output --target ${target}

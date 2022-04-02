@@ -1,7 +1,7 @@
 set(CMAKE_SYSTEM_NAME Linux)
 set(CMAKE_SYSTEM_PROCESSOR riscv)
 
-set(CROSS_COMPILE "${CMAKE_CURRENT_SOURCE_DIR}/../prebuilt/gcc/linux-x86/riscv/toolchain-thead-glibc/riscv64-glibc-gcc-thead_20200702/bin/riscv64-unknown-linux-gnu-")
+set(CROSS_COMPILE "riscv64-unknown-linux-gnu-")
 set(CMAKE_C_COMPILER   ${CROSS_COMPILE}gcc)
 set(CMAKE_ASM_COMPILER ${CROSS_COMPILE}gcc)
 set(CMAKE_AR           ${CROSS_COMPILE}ar)

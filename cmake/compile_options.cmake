@@ -15,7 +15,6 @@ endif()
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 add_link_options(
-	-nostartfiles
 	-nostdlib
 	-T${CMAKE_CURRENT_SOURCE_DIR}/linker_scripts/${BOARD}_link.lds
 )
