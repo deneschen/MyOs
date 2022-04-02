@@ -12,9 +12,11 @@ if(CONFIG_ARM64)
 	)
 endif()
 
+set(CMAKE_ASM_FLAGS "-D__ASSEMBLY__ -x assembler-with-cpp")
+
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 add_link_options(
 	-nostdlib
-	-T${CMAKE_CURRENT_SOURCE_DIR}/linker_scripts/${BOARD}_link.lds
+	-T${PROJECT_BINARY_DIR}/link.ld
 )
